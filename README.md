@@ -2,7 +2,8 @@
 <p align="center">
   <img src="https://img.shields.io/badge/zero%20deps-✔-00E5FF?style=for-the-badge">
   <img src="https://img.shields.io/badge/cross%20platform-win%20%7C%20mac%20%7C%20linux-777?style=for-the-badge">
-![CI](https://img.shields.io/github/actions/workflow/status/xryv/envsubst-windows-linux/ci.yml?style=for-the-badge)
+  <img src="https://img.shields.io/github/actions/workflow/status/xryv/envsubst-windows-linux/ci.yml?style=for-the-badge">
+
 
 </p>
 
@@ -44,4 +45,5 @@ echo "API_URL=https://example.com" >> .env
 
 python3 cli.py examples/example.yml --env .env --out dist
 cat dist/examples/example.yml
+
 
