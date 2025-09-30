@@ -45,5 +45,20 @@ echo "API_URL=https://example.com" >> .env
 
 python3 cli.py examples/example.yml --env .env --out dist
 cat dist/examples/example.yml
+```
+
+<p align="center">
+  <a href="https://hits.sh/github.com/xryv/envsubst-windows-linux/">
+    <img
+      alt="envsubst-windows-linux visits"
+      src="https://hits.sh/github.com/xryv/envsubst-windows-linux.svg?label=visits&color=00E5FF&labelColor=777"
+    />
+  </a>
+</p>
+
+<p align="center">
+  <sub>🔧 Another shell just got its variables resolved. If the count ticked, an env found its place.</sub>
+</p>
+
 
 
