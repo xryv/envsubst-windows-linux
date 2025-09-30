@@ -1,0 +1,7 @@
+# Template config (rendered by envsubst-windows-linux)
+service: ${SERVICE_NAME}
+port: ${PORT}
+image: "{{IMAGE_TAG}}"
+env:
+  - key: API_URL
+    value: "{{API_URL}}"

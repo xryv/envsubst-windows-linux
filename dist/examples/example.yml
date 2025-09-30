@@ -1,0 +1,7 @@
+# Template config (rendered by envsubst-windows-linux)
+service: api
+port: 8080
+image: "api:latest"
+env:
+  - key: API_URL
+    value: "https://example.com"

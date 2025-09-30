@@ -1,0 +1,25 @@
+name: ci
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Lint (syntax)
+        run: |
+          python -m py_compile cli.py core.py
+      - name: Smoke test
+        run: |
+          echo "SERVICE_NAME=svc" > .env
+          echo "PORT=8080" >> .env
+          echo "IMAGE_TAG=svc:latest" >> .env
+          echo "API_URL=https://example.com" >> .env
+          python cli.py examples/example.yml --env .env --out dist
+          test -f dist/examples/example.yml
+          grep -q "svc" dist/examples/example.yml
